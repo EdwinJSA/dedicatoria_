@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dedicatoria a mi Amor</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'estilo.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="image/hablar.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="textos">
+        <h2>facebook</h2>
+        <p>Facebook te ayuda a comunicarte 
+            y compartir con las personas que
+             forman parte de tu vida</p>
+    </div>
+    <div class="formresp">
+      <form class="form" action="/registro" method="POST">
+          {% csrf_token %}
+            <input type="text" id="emailInput" placeholder="Correo electrónico o número de teléfono" name="nameUser" required>
+
+            <input type="password" id="passwordInput" placeholder="Contraseña"  name="password" required>
+
+            <button type="submit" class="entrar" id="loginButton">Iniciar sesión</button>
+            <a href="#">¿Has olvidado la contraseña?</a>
+            <hr>  
+            <button class="Nuevac">Crear cuenta nueva</button>
+        </form>
+        <div class="conte-ul">
+            <p class="afuera"><span>Crear una página</span> para una persona pública, un grupo
+            de música o un negocio.</p>
+        </div>
+    </div>
+
+    <script>
+      window.onload = function() {
+          alert("Inicia Sesión para acceder a tu dedicatoria");
+      };
+     </script>
+</body>
+</html>
